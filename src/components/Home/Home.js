@@ -17,6 +17,7 @@ const Home = () => {
             </div>
                 <div>
                     <h3 className='text-3xl text-center'>Customer Reviews(6)</h3>
+                    <button className='bg-violet-600 px-5 text-white rounded'>See All Reviews</button>
                 </div>
         </div>
     );
