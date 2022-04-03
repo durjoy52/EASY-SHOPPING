@@ -1,6 +1,10 @@
 import React from 'react';
+import useReviews from '../../hooks/useReviews';
 import head from '../../images/headphone.jpg';
+import Review from '../Review/Review';
 const Home = () => {
+    const [reviews] = useReviews()
+    const firstReviews =reviews.slice(0,3)
     return (
         <div>
             <div className='flex justify-between my-4'>
@@ -16,8 +20,13 @@ const Home = () => {
                 </div>
             </div>
                 <div>
-                    <h3 className='text-3xl text-center'>Customer Reviews(6)</h3>
-                    <button className='bg-violet-600 px-5 text-white rounded'>See All Reviews</button>
+                    <h3 className='text-3xl text-center'>Customer Reviews({reviews.length})</h3>
+                    <div className='grid grid-cols-3 gap-3'>
+                        {
+                            firstReviews.map(review => <Review review={review}></Review>)
+                        }
+                    </div>
+                    <div className="flex justify-center"><button className='bg-violet-600 px-5 text-white rounded mb-2'>See All Reviews</button></div>
                 </div>
         </div>
     );
