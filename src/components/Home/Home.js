@@ -13,8 +13,8 @@ const Home = () => {
                 <div className="flex items-center justify-center">
                     <div >
                     <h1 className='text-6xl font-bold text-violet-600 mb-3'>Sound is life,enjoy life </h1>
-                    <p className='text-4xl text-sky-600'>Get exclusive sound bar with up to 50% discount</p>
-                    <button className='rounded-full bg-blue-400 px-4 py-3 text-white mt-4 hover:bg-blue-300 hover:text-black font-bold'>Live demo</button>
+                    <p className='text-4xl text-sky-300'>Get exclusive sound bar with up to 50% discount</p>
+                    <button className='rounded-full hover:bg-blue-300 px-4 py-3 hover:text-white mt-4 bg-blue-200 text-sky-700 font-bold'>Live demo</button>
                     </div>
                 </div>
                 <div>
