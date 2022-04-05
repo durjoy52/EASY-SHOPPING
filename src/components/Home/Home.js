@@ -9,7 +9,7 @@ const Home = () => {
     const navigate = useNavigate();
     return (
         <div>
-            <div className='flex justify-between my-4'>
+            <div className='flex flex-col-reverse md:flex-row items-center justify-between my-4'>
                 <div className="flex items-center justify-center">
                     <div >
                     <h1 className='text-6xl font-bold text-violet-600 mb-3'>Sound is life,enjoy life </h1>
@@ -23,7 +23,7 @@ const Home = () => {
             </div>
                 <div>
                     <h3 className='text-3xl text-center'>Customer Reviews({reviews.length})</h3>
-                    <div className='grid grid-cols-3 gap-3 justify-items-center'>
+                    <div className='grid grid-cols-1 md:grid-cols-3 justify-items-center'>
                         {
                             firstReviews.map(review => <Review key={review.id} review={review}></Review>)
                         }

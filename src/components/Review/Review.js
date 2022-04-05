@@ -3,7 +3,7 @@ import React from 'react';
 const Review = (props) => {
     const{name,img,comment,rating} =props.review
     return (
-        <div className='flex border rounded gap-4 items-center p-2 my-6 w-80'>
+        <div className='flex border rounded gap-2 items-center p-2 my-6 md:w-60 lg:w-80'>
             <div className='w-1/3'>
                 <img className='rounded'  src={img} alt="" />
             </div>

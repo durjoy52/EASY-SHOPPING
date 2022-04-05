@@ -5,14 +5,13 @@ import useRevenue from '../../hooks/useRevenue';
 const Dashboard = () => {
     const [revenue] = useRevenue() 
     return (
-        <div className='grid grid-cols-2 justify-items-center gap-2'>
+        <div className='grid grid-cols-1 md:grid-cols-2 justify-items-center md:gap-2'>
            <div>
                <h3 className='text-center text-sky-600 font-bold mb-2 text-xl'>MONTH WISE SELL</h3>
-               <LineChart width={500} height={300} data={revenue}>
+               <LineChart  width={500} height={300} data={revenue}>
                    <Line type="monotone" dataKey="sell" stroke="#8884d8" ></Line>
                    <XAxis dataKey="month" />
                    <YAxis dataKey="sell"></YAxis>
-                   <Tooltip/>
                    <Legend></Legend>
                </LineChart>
            </div>
